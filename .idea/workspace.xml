@@ -2,53 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efaf7459-1a98-4f7b-b447-8511e6f6a25d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.eslintrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_bishop.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_king.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_knight.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_pawn.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_queen.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/black_rook.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_bishop.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_king.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_knight.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_pawn.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_queen.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/white_rook.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/mixins.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/reset.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/style.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/scss/variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Board/Board.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Board/Board.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Field/Field.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Field/Field.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Field/Figures.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Log/Log.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/Log/Log.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/config/fields.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/config/lines.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/constants/actions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/constants/application.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/constants/figures.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/constants/position.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.jsx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/application.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/store/configureStore.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/utils/fields.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/utils/log.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/utils/moves.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack.config.babel.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/src/utils/moves.js" afterPath="$PROJECT_DIR$/src/utils/moves.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,12 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.scss">
+      <file leaf-file-name="moves.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/moves.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="343">
+              <caret line="266" column="34" lean-forward="false" selection-start-line="266" selection-start-column="34" selection-end-line="266" selection-end-column="34" />
+              <caret line="264" column="33" lean-forward="false" selection-start-line="264" selection-start-column="33" selection-end-line="264" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,16 +42,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/utils/moves.js" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1908" />
     <option name="y" value="22" />
-    <option name="width" value="1852" />
+    <option name="width" value="1920" />
     <option name="height" value="991" />
   </component>
   <component name="ProjectView">
@@ -137,6 +106,12 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -173,7 +148,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="22" width="1920" height="991" extended-state="6" />
+    <frame x="-1908" y="22" width="1920" height="991" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -221,6 +196,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/fields.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <marker date="1524343664000" expanded="true" signature="7:43" ph="..." />
+            <marker date="1524343664000" expanded="true" signature="279:439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/moves.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="266" column="34" lean-forward="false" selection-start-line="266" selection-start-column="34" selection-end-line="266" selection-end-column="34" />
+          <caret line="264" column="33" lean-forward="false" selection-start-line="264" selection-start-column="33" selection-end-line="264" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

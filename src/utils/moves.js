@@ -262,9 +262,9 @@ export default {
 			const isBarrierForSecondField = figures
 				.find(figure => figure.position === getField(horizontal, vertical + 2));
 			// Узнаем есть ли вражеская фигура слева.
-			const isEnemyLeft = checkBarrier(figures, getField(horizontal - 1, vertical + 1), WHITE);
+			const isEnemyLeft = !checkBarrier(figures, getField(horizontal - 1, vertical + 1), WHITE);
 			// Узнаем есть ли вражеская фигура справа.
-			const isEnemyRight = checkBarrier(figures, getField(horizontal + 1, vertical + 1), WHITE);
+			const isEnemyRight = !checkBarrier(figures, getField(horizontal + 1, vertical + 1), WHITE);
 			const available = [];
 
 			// Если +1 по вертикали свободно, пушаем в массив новое доступное поле.
@@ -306,8 +306,8 @@ export default {
 				.find(figure => figure.position === getField(horizontal, vertical - 1));
 			const isBarrierForSecondField = figures
 				.find(figure => figure.position === getField(horizontal, vertical - 2));
-			const isEnemyLeft = checkBarrier(figures, getField(horizontal + 1, vertical - 1), BLACK);
-			const isEnemyRight = checkBarrier(figures, getField(horizontal - 1, vertical - 1), BLACK);
+			const isEnemyLeft = !checkBarrier(figures, getField(horizontal + 1, vertical - 1), BLACK);
+			const isEnemyRight = !checkBarrier(figures, getField(horizontal - 1, vertical - 1), BLACK);
 			const available = [];
 
 			if (!isBarrierForField) {
