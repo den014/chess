@@ -1,0 +1,54 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.chess-log {
+    position: absolute;
+    top: 50%;
+    right: -430px;
+    margin-top: - 400px;
+    padding: 20px;
+    width: 400px;
+    height: 800px;
+    background: $boardColor;
+    border: solid 1px;
+    border-color:  rgba(255, 255, 255, .5) rgba(0, 0, 0, .07) rgba(0, 0, 0, .07) rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, .2);
+
+    display: flex;
+    flex-direction: column;
+
+    &-info {
+        height: 150px;
+        line-height: 150px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, .1);
+        border: solid 1px;
+        border-color:  rgba(0, 0, 0, .07) rgba(255, 255, 255, .3) rgba(255, 255, 255, .3) rgba(0, 0, 0, .07);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    &-moves {
+        height: calc(100% - 170px);
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, .1);
+        border: solid 1px;
+        border-color:  rgba(0, 0, 0, .07) rgba(255, 255, 255, .3) rgba(255, 255, 255, .3) rgba(0, 0, 0, .07);
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    &-move {
+        display: block;
+        padding: 5px 0;
+        font-family: Arial, sans-serif;
+
+        b {
+            font-weight: bold;
+        }
+    }
+}

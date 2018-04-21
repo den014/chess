@@ -1,0 +1,33 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.chess-board {
+    &-field {
+        float: left;
+        width: $boardFieldSize;
+        height: $boardFieldSize;
+        padding: 0;
+        border: solid 3px;
+        border-color:  rgba(255, 255, 255, .15) rgba(0, 0, 0, .07) rgba(0, 0, 0, .07) rgba(255, 255, 255, .15);
+        outline: 0;
+
+        &:hover:not(:disabled) {
+            background: chartreuse;
+            cursor: pointer;
+        }
+
+        &.event-active {
+            background: chartreuse !important;
+        }
+
+        &.event-available {
+            border-color: chartreuse !important;
+
+            .chess-board-figure {
+                &:before {
+                    border: solid 3px red !important;
+                }
+            }
+        }
+    }
+}

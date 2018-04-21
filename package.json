@@ -1,0 +1,48 @@
+{
+  "name": "Chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "Deniss Aleksejenko",
+  "license": "",
+  "devDependencies": {
+    "babel-core": "6.23.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-stage-2": "6.22.0",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.7.0",
+    "file-loader": "1.1.11",
+    "node-sass": "4.8.3",
+    "react-hot-loader": "3.1.3",
+    "redux-devtools": "^3.4.1",
+    "sass-loader": "7.0.1",
+    "webpack": "4.6.0",
+    "webpack-cli": "2.0.10",
+    "webpack-dev-server": "3.1.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "1.6.1",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "classnames": "^2.2.5",
+    "css-loader": "0.28.11",
+    "prop-types": "15.6.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.2.0",
+    "style-loader": "0.21.0"
+  }
+}
