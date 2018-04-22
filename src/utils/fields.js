@@ -2,11 +2,11 @@ import {
 	KING
 } from '../constants/figures';
 
-// Возвращаем правильный идентификатор поля
+// Возвращаем правильный идентификатор поля.
 export const getField = (horizontal, vertical) =>
 	`${horizontal}/${vertical}`;
 
-// Проверка состояния игры
+// Проверка состояния игры.
 export const checkVictory = () =>
 	function checkVictoryThunk(dispatch, getSTate) {
 		const state = getSTate();

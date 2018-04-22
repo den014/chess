@@ -27,32 +27,32 @@ import './Board.scss';
 
 
 class Board extends Component {
-	// Проверка - можно ли сделать ход на данное поле
-	// Аргументом принимает идентификатор поля и сравнивает с глобальным стейтом
+	// Проверка - можно ли сделать ход на данное поле.
+	// Аргументом принимает идентификатор поля и сравниваем с глобальным стейтом.
 	isAvailableField(field) {
 		const isAvailable = this.props.available.find(fl => fl === field);
 
 		return !!isAvailable;
 	}
 
-	// Проверка - будет ли поле заблокировано
+	// Проверка - будет ли поле заблокировано.
 	isDisabledField(id) {
 		const {figures, walk, victory} = this.props;
 		const figure = figures.find(figure => figure.position === id);
 
-		// Проверка - есть доступно ли поле для хода
+		// Проверка - доступно ли поле для хода.
 		const isAvailable = this.isAvailableField(id);
-		// Проверка - есть ли на данном поле фигура
+		// Проверка - есть ли на данном поле фигура.
 		const isNoFigureAndAvailableMove = !figure && !isAvailable;
-		// Проверка - для блокировки полей с фигурами противоположного цвета
+		// Проверка для блокировки полей с фигурами противоположного цвета.
 		const isNotActiveColor = figure && !isAvailable && figure.color !== walk;
 
-		// Отдаем результат, дополнительно проверив что игра не закончена
-		// В случае победы (ликвидирования короля), вся доска будет заблокирована
+		// Отдаем результат, дополнительно проверив что игра не закончена.
+		// В случае победы (ликвидирования короля), вся доска будет заблокирована.
 		return isNoFigureAndAvailableMove || isNotActiveColor || victory;
 	}
 
-	// Выставляем фигуры на доске
+	// Выставляем фигуры на доске.
 	setFigure(field) {
 		const figure = this.props.figures.find(figure => figure.position === field);
 
@@ -66,12 +66,12 @@ class Board extends Component {
 		return null;
 	}
 
-	// Выставляем подходящее действие
+	// Выставляем подходящее действие.
 	// При нажатии на поле, могут произойти несколько вариантов событий:
-	// Пользователь нажал на фигуру (фокус и поиск подходящих ходов)
-	// Пользователь повторно нажал на фигуру (Убрать фокус, убрать ходы)
-	// Пользователь сделал ход (запустить соответствующий экшен)
-	// Пользователь напал на вражескую фигуру (сделать ход и дополнительно удалить фигуру из глобального стейта)
+	// Пользователь нажал на фигуру (фокус и поиск подходящих ходов);
+	// Пользователь повторно нажал на фигуру (убрать фокус, убрать ходы);
+	// Пользователь сделал ход (запустить соответствующий экшен);
+	// Пользователь напал на вражескую фигуру (сделать ход и дополнительно удалить фигуру из глобального стейта).
 	setMoveAction(field) {
 		const {
 			unsetActiveFigure,
@@ -86,25 +86,25 @@ class Board extends Component {
 		const isAvailableField = this.isAvailableField(field);
 		const isFigureInNextField = figures.find(figure => figure.position === field);
 
-		// Если поле доступно и на нем находится вражеская фигура, удаляем ее
+		// Если поле доступно и на нем находится вражеская фигура, удаляем ее.
 		if (isAvailableField && isFigureInNextField) {
 			removeFigure(field);
 		}
 
-		// Если поле доступно, переходим на него
+		// Если поле доступно, переходим на него.
 		if (isAvailableField) {
 			setNewMove(field);
 		}
 
-		// Если пользователь нажимает второй раз по фигуре, убираем фокус (очищаем стейт: active, available)
-		// Заканчиваем выполнение
+		// Если пользователь нажимает второй раз по фигуре, убираем фокус (очищаем стейт: active, available).
+		// Заканчиваем выполнение.
 		if (active === field || isAvailableField) {
 			unsetActiveFigure();
 			unsetAvailableFields();
 			return;
 		}
 
-		// Фокус на фигуре
+		// Фокус на фигуре.
 		setActiveFigure(field);
 		getAvailableFields();
 	}
@@ -114,7 +114,7 @@ class Board extends Component {
 			<div className="chess-board-wrap">
 				<div className="chess-board">
 					<div className="chess-board-container">
-						{/*Создаем ряды на доске*/}
+						{/* Создаем ряды на доске */}
 						{lines.map(line =>
 							<div
 								key={line.id}
@@ -124,7 +124,7 @@ class Board extends Component {
 									{'chess-board-line-even': line.position === EVEN}
 								)}
 							>
-								{/*Создаем поля и отдаем пропсы для правильной отрисовки логики каждого поля*/}
+								{/* Создаем поля и отдаем пропсы для правильной отрисовки логики каждого поля */}
 								{fields[line.id].map(field =>
 									<Field
 										key={field.id}

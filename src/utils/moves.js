@@ -48,14 +48,14 @@ const getKnightMoves = (position, figures, color) => {
 
 // Функция для поиска доступных ходов для ферзей.
 const getBishopMoves = (position, figures, color) => {
-	// Сплитим идентификатор поля, чтобы получить значени горизонтали и вертикали.
+	// Сплитим идентификатор поля, чтобы получить значение горизонтали и вертикали.
 	const pos = position.split('/');
 	const horizontal = Number(pos[0]);
 	const vertical = Number(pos[1]);
 	const available = [];
 
 	// Флаги - реагируют на результат выполнения: checkBarrier и checkIsFieldNotHasFriendlyFigure.
-	// Требуются для того, чтобы поля, за пределами преграды, не были доступны.
+	// Требуются для того, чтобы поля за пределами преграды, не были доступны.
 	let isTopLeftNotLock = true;
 	let isTopRightNotLock = true;
 	let isBottomLeftNotLock = true;
@@ -71,7 +71,7 @@ const getBishopMoves = (position, figures, color) => {
 				checkIsFieldNotHasFriendlyFigure(figures, getField(horizontal - index, vertical - index), color);
 
 			if (isNoBarrier && isNoFriendlyFigure && isBottomLeftNotLock) {
-				// Если все услови выполнены, пошаем значение поля в available.
+				// Если все условия выполнены, пушаем значение поля в массив available.
 				available.push(getField(horizontal - index, vertical - index));
 			} else {
 				// Если была обнаружена преграда, закрываем доступ к линии (низ/лево).
@@ -128,7 +128,7 @@ const getBishopMoves = (position, figures, color) => {
 };
 
 // Функция для поиска доступных ходов для слона.
-// Логика функции аналогичка getBishopMoves(),
+// Логика функции аналогична getBishopMoves(),
 // только флаги служат для сторон (лево/право/верх/низ) и другие алгоритмы.
 const getRookMoves = (position, figures, color) => {
 	const pos = position.split('/');
@@ -228,7 +228,7 @@ const getKingMoves = (position, figures, color) => {
 	];
 
 	// Возвращаем результат выполнения цикла.
-	// Т.к король может ходить только на одно поле вперед, поиск преграды, в лице вражеской фигуры, не требуется.
+	// Т.к король может ходить только на одно поле, поиск преграды в лице вражеской фигуры, не требуется.
 	return moves.map(move => {
 		if (checkIsFieldNotHasFriendlyFigure(figures, move, color)) {
 			return move;
@@ -246,7 +246,7 @@ const getKingMoves = (position, figures, color) => {
 */
 export default {
 	[WHITE]: {
-		// Функция для поиска доступных ходов для пошки.
+		// Функция для поиска доступных ходов для пешки.
 		// В случае пешки, нет необходимости выводить ее в оидельную функцию, т.к. она практически вся
 		// состоит из алгоритмов.
 		[FIGURE.PAWN]: (position, figures) => {

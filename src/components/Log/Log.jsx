@@ -15,16 +15,16 @@ class Log extends Component {
 		const {active: prevField, figures} = this.props;
 		const {figures: nextFigures} = nextProps;
 
-		// При получении новых пропсов, делаем проверку на то, имеется ли номер активного поля
+		// При получении новых пропсов, делаем проверку на то, имеется ли номер активного поля.
 		if (prevField) {
-			// При переходе, по старому значению находим в глобальном стейте конфигурацию фигуры
+			// При переходе по старому значению, находим в глобальном стейте конфигурацию фигуры.
 			const figureConfig =
 				figures.map(figure => figure.position === prevField ? figure : null).find(f => f !== null);
-			// По полученному идентификатору фигуры, находим ее нынешнее положение и достаем его
+			// По полученному идентификатору фигуры, находим ее нынешнее положение и достаем его.
 			const secondPosition =
 				nextFigures.map(({id, position}) => id === figureConfig.id ? position : null).find(f => f !== null);
 
-			// Отправляем данные в log api
+			// Отправляем данные в log api.
 			pushMove(figureConfig, secondPosition);
 		}
 	}
@@ -33,7 +33,7 @@ class Log extends Component {
 		const {walk, victory} = this.props;
 		let title;
 
-		// В зависимости от текущего состояния данных, формируем текст заголовка
+		// В зависимости от текущего состояния данных, формируем текст заголовка.
 		if (victory) {
 			title = `Победил: ${walk}`;
 		} else {
@@ -54,7 +54,7 @@ class Log extends Component {
 				</div>
 
 				<div className="chess-log-moves">
-					{/*Мапимся по массиву логов и выводим результат*/}
+					{/* Мапимся по массиву логов и выводим результат */}
 					{moves && moves.map(({id, figure, color, position, secondPosition}) =>
 						<div
 							key={id}
