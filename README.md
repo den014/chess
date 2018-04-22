@@ -12,3 +12,6 @@
 * npm install
 * npm run
 * http://localhost:8080/
+
+Тесты:
+* npm test
