@@ -4,11 +4,11 @@ import {bindActionCreators} from 'redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import Field from '$components/Field/Field';
-import Log from '$components/Log/Log';
+import Field from '../Field/Field';
+import Log from '../Log/Log';
 
-import lines from '$config/lines';
-import fields from '$config/fields';
+import lines from '../../config/lines';
+import fields from '../../config/fields';
 import {
 	setActiveFigure,
 	unsetActiveFigure,
@@ -16,12 +16,12 @@ import {
 	unsetAvailableFields,
 	setNewMove,
 	removeFigure
-} from '$actions';
+} from '../../actions';
 
 import {
 	ODD,
 	EVEN
-} from '$constants/application';
+} from '../../constants/application';
 
 import './Board.scss';
 

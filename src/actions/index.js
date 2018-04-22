@@ -1,5 +1,5 @@
-import getMoves from '$utils/moves';
-import {checkVictory} from '$utils/fields';
+import getMoves from '../utils/moves';
+import {checkVictory} from '../utils/fields';
 
 import {
 	SET_ACTIVE_FIGURE,
@@ -10,7 +10,7 @@ import {
 	REMOVE_FIGURE,
 	CHANGE_PLAYER,
 	SET_VICTORY
-} from '$constants/actions';
+} from '../constants/actions';
 
 // Положить в стейт номер активного поля
 export const setActiveFigure = id => ({

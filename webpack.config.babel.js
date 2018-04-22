@@ -40,20 +40,6 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		alias: {
-			$fonts: path.resolve(__dirname, 'src/assets/fonts'),
-			$img: path.resolve(__dirname, 'src/assets/img'),
-			$scss: path.resolve(__dirname, 'src/assets/scss'),
-
-			$components: path.resolve(__dirname, 'src/components'),
-			$actions: path.resolve(__dirname, 'src/actions'),
-			$reducers: path.resolve(__dirname, 'src/reducers'),
-			$constants: path.resolve(__dirname, 'src/constants'),
-			$store: path.resolve(__dirname, 'src/store'),
-
-			$utils: path.resolve(__dirname, 'src/utils'),
-			$config: path.resolve(__dirname, 'src/config'),
-		},
 	},
 	output: {
 		path: path.join(__dirname, 'src'),

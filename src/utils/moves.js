@@ -1,9 +1,9 @@
-import {getField} from '$utils/fields';
+import {getField} from '../utils/fields';
 
-import * as FIGURE from '$constants/figures';
-import {BLACK, WHITE} from '$constants/application';
+import * as FIGURE from '../constants/figures';
+import {BLACK, WHITE} from '../constants/application';
 
-import lines from '$config/lines';
+import lines from '../config/lines';
 
 /*
 	Moves.js - Логика для поиска доступных полей.
@@ -13,12 +13,12 @@ import lines from '$config/lines';
 // На вход принимает массив фигур на поле, второй аргумент: предыдущее доступное поле и цвет.
 // Пример: Слон A1, вражеская пешка А5. Чтобы слон не мог ее перепрыгнуть, данная функция выполняет работу флага,
 // говорящего о том, что есть вражеская преграда.
-const checkBarrier = (figures, prevPosition, color) =>
+export const checkBarrier = (figures, prevPosition, color) =>
 	!figures.find(figure => figure.position === prevPosition && figure.color !== color);
 
 // Практически идентичная проверка как на вражескую фигуру, но в данном случае, фигура дружественная.
 // Разделено, потому что в случае с вражеской фигурой, ее поле можно занять, путем ликвидации.
-const checkIsFieldNotHasFriendlyFigure = (figures, position, color) =>
+export const checkIsFieldNotHasFriendlyFigure = (figures, position, color) =>
 	!figures.find(figure => figure.position === position && figure.color === color);
 
 

@@ -7,15 +7,15 @@ import {
 	REMOVE_FIGURE,
 	CHANGE_PLAYER,
 	SET_VICTORY
-} from '$constants/actions';
+} from '../constants/actions';
 
 import {
 	WHITE,
 	BLACK
-} from '$constants/application';
+} from '../constants/application';
 
-import * as POS from '$constants/position';
-import * as FIGURE from '$constants/figures';
+import * as POS from '../constants/position';
+import * as FIGURE from '../constants/figures';
 
 export const initialState = {
 	walk: WHITE,

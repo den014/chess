@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {getMoves, pushMove} from '$utils/log';
+import {getMoves, pushMove} from '../../utils/log';
 
 import './Log.scss';
 import PropTypes from 'prop-types';

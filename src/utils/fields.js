@@ -1,6 +1,6 @@
 import {
 	KING
-} from '$constants/figures';
+} from '../constants/figures';
 
 // Возвращаем правильный идентификатор поля
 export const getField = (horizontal, vertical) =>

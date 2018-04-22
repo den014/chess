@@ -1,4 +1,4 @@
-import * as POS from '$constants/position';
+import * as POS from '../constants/position';
 
 export default [
 	[

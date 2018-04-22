@@ -1,7 +1,7 @@
 import {
 	ODD,
 	EVEN
-} from '$constants/application';
+} from '../constants/application';
 
 export default [
 	{
